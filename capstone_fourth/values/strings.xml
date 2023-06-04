@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">StudyKotlinBottomIcon</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Today_fragment">todayFragment</string>
+    <string name="StudyKotlinBottomIcon">\n</string>
+    <string name="painbutton" />
+    <string name="bloodbutton" />
+    <string name="twingebutton" />
+    <string name="swellbutton" />
+</resources>
