@@ -1,0 +1,5 @@
+1.recyclerView의 itemView 클릭에 따른 Activity 전환 - Intent
+2.Intent로 MainActivity에 대한 정보를 SubActivity로 전달하여 상단에 띄우기
+3.바텀 메뉴바 목록 5개로 변경
+4.전체적인 색상, 모양 커스텀
+5.달력에 ImageView unvisiable 상태로 넣어둠
