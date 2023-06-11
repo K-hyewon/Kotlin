@@ -1,0 +1,21 @@
+[기능 구현]
+1. itemView ClickListener를 통해 noteActivity로 넘어가기 (Intent / startActivity)
+2. backbutton 기능 구현 ( finish() )  --->  안정적인 생명주기 아님 
+3. itemView에 icon 넣기
+
+[구현 못한 기능]
+1.noteActivity에서의 selected정보를 intent로 MainActivity에 전달해서 --> itemView에 icon visibility = true / false 작동하게 하기
+  - 단방향(MainActivity --> SubActivity) intent 정보 전달은 구현했으나(1번)
+  - 양방향(MainActivity <--> SubActivity) intent 정보 전달은 하지 못함
+  
+    (1) icon이 RecyclerView속 itemView에 있기 때문에 정보를 AdapterActivity로 받아야 하는데, 함수상으로는 MainActivity로 직접 받아야 하는 것 같았음
+  
+  
+2. noteActivity에서 날짜별로 입력한 정보를 저장하지 못함
+  - MainActivity로 넘어갔다가 다시 noteAcitivity로 이동했을 경우, 초기화된 기록화면이 뜸
+   + finish() 사용한 이유  :  supportActionBar?.setDisplayHomeAsUpEnabled(true)를 이용하여 backbutton구현을 하려고 했으나,
+                              ActionBar에 버튼이 생기지 않는 문제를 해결하지 못함
+   > finish() 사용  :   MainActivity를 noteActivity의 parent로 설정하여, 뒤로 가기 버튼을 누르면 noteActivity가 finish 되도록 구현함
+         
+    (1) 구현 못한 1번 기능을 해결한 후 하려고 했으나, 시간이 부족해서 하지 못함
+    (2) 기능을 구현하기 위해서는 어떻게 해야 하지....? DB....?
