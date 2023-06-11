@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NoteActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/slight_pink"
+            android:orientation="horizontal"
+            android:id="@+id/day_layout">
+
+            <ImageButton
+                android:id="@+id/close_btn"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:layout_gravity="left"
+                android:contentDescription="pre_botton_image"
+                android:src="@drawable/ic_pre"
+                tools:ignore="HardcodedText"
+                app:tint="@color/gray_600" />
+
+            <FrameLayout
+                android:layout_width="40dp"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="fill_vertical"
+                android:text="2023년 6월 6일"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="@color/gray_900"
+                android:id="@+id/day_tv"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/recordTv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:text="     기록 · 스케줄"
+                android:textColor="@color/gray_900"
+                android:textStyle="bold"
+
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="360dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:translationY="15dp">
+
+
+            <EditText
+                android:id="@+id/recoredET"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:bottomRightRadius="200dp"
+                android:bottomLeftRadius="100dp"
+                android:topLeftRadius="100dp"
+                android:topRightRadius="100dp"
+                android:ems="10"
+                android:background="@drawable/editbox_shape"
+                android:hint="오늘의 상태와 스케줄을 기록해주세요."
+                android:inputType="textMultiLine"
+                android:privateImeOptions="defaultInputmode=korean"
+                android:scrollHorizontally="false" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:translationY="20dp">
+
+            <TextView
+                android:id="@+id/conditionTv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:text="      오늘 나의 상태는?"
+                android:textStyle="bold"
+                android:textColor="@color/gray_900"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="360dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:translationY="40dp">
+
+        <LinearLayout
+            android:layout_width="360dp"
+            android:layout_height="150dp"
+            android:orientation="horizontal"
+            tools:ignore="ExtraText">
+
+            <ImageButton
+                android:id="@+id/redBtn"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:src="@drawable/redbtn_state"
+                android:contentDescription="@string/bloodbutton"
+                android:background="@android:color/transparent"
+                tools:ignore="SpeakableTextPresentCheck"/>
+
+            <ImageButton
+                android:id="@+id/blackBtn"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:src="@drawable/blackbtn_state"
+                android:contentDescription="@string/painbutton"
+                android:background="@android:color/transparent"
+                tools:ignore="SpeakableTextPresentCheck"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="360dp"
+            android:layout_height="150dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/yellowBtn"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:src="@drawable/yellowbtn_state"
+                android:contentDescription="@string/swellbutton"
+                android:background="@android:color/transparent"
+                tools:ignore="SpeakableTextPresentCheck"
+                />
+
+            <ImageButton
+                android:id="@+id/blueBtn"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:src="@drawable/bluebtn_state"
+                android:focusableInTouchMode = "true"
+                android:contentDescription="@string/twingebutton"
+                android:background="@android:color/transparent"
+                tools:ignore="SpeakableTextPresentCheck"/>
+        </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
